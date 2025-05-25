@@ -9,7 +9,6 @@ def dailydata_csv(symbol_list, key):
     output_size = "full" # Optional, "compact" by default, "full" for full history
     data_type = "csv" # for specifying csv output
 
-
     for symbol in symbols_list:
         url = f"https://www.alphavantage.co/query?function={function}&symbol={symbol}&apikey={key}&outputsize={output_size}&datatype={data_type}"
 
@@ -21,8 +20,6 @@ def dailydata_csv(symbol_list, key):
             with open(f"{symbol}_daily.csv", "w") as file:
                 file.write(csv_data)
                 print(f"CSV data saved to {symbol}_daily.csv")
-
-
 
         else:
             #Unsuccessful response code
