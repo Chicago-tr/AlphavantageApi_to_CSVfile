@@ -5,7 +5,7 @@ import requests
 
 def dailydata_csv(symbol_list, key):
 
-    function = "TIME_SERIES_DAILY"
+    function = "TIME_SERIES_DAILY_ADJUSTED"
     output_size = "full" # Optional, "compact" by default, "full" for full history
     data_type = "csv" # for specifying csv output
 
